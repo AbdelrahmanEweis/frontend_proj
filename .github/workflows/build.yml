@@ -36,8 +36,10 @@ jobs:
       - name: Send GitHub Action trigger data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.26.0
+        continue-on-error: true
         with:
-          payload: |
+            # See also: https://api.slack.com/methods/chat.postMessage#channels
+            channel-id: general            payload: |
               {
                 "blocks": [
                   {
