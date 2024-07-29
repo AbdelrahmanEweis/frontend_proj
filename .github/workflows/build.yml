@@ -39,7 +39,8 @@ jobs:
         continue-on-error: true
         with:
             # See also: https://api.slack.com/methods/chat.postMessage#channels
-            channel-id: general            payload: |
+            channel-id: general
+              payload: |
               {
                 "blocks": [
                   {
